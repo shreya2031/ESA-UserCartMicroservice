@@ -30,8 +30,14 @@ var ProductSchema = new Schema({
     availableQuantity: {
         type: Number,
         required: true
-      },
-    
-  });
+      }
+    }, 
+    {
+      writeConcern: {
+        j: true,
+        wtimeout: 1000
+    }
+    }
+  );
 
 module.exports = mongoose.model('Products', ProductSchema);

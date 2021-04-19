@@ -27,7 +27,12 @@ var CartSchema = new Schema({
     type: Number,
     required:true
     }
-
+},
+{
+    writeConcern: {
+        j: true,
+        wtimeout: 1000
+    }
 
 });
 module.exports = mongoose.model('Cart', CartSchema);

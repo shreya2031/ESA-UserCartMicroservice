@@ -3,14 +3,15 @@ var express = require('express'),
   port = process.env.PORT || 5000,
   mongoose = require('mongoose'),
   User = require('./models/userModel'), 
-  CartItem = require('./models/cartModel'), 
-  ProductItem = require('./models/ProductModel'),
+  Cart = require('./models/cartModel'), 
+  Product = require('./models/ProductModel'),
   bodyParser = require('body-parser');
+  require("dotenv").config();
   
-//MongoDB Atlas connection url
-//Put your url here
-const url = 'mongodb+srv://cartapi:api123@cluster0.taov3.mongodb.net/productDatabase?retryWrites=true&w=majority';
-mongoose.connect(url,{useNewUrlParser:true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify:false});
+//MongoDB Atlas connection uri
+const uri = process.env.mongo_URI;
+
+mongoose.connect(uri,{useNewUrlParser:true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify:false});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -26,4 +27,4 @@ productRoutes(app);
 app.listen(port);
 
 console.log('User Cart API server running on port : ' + port);
-console.log('Follow link: http://localhost:'+port)
+console.log('\n')
