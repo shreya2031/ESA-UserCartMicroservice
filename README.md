@@ -107,4 +107,33 @@ Update information of an existing product by sending a PUT request to __localhos
 
 Delete an existing product by sending a DELETE request to __localhost:5000/rest/v1/products/{your_productId}__
 
+To add a product to the user cart, send a POST request to __localhost:5000/rest/v1/users/{your_username}/cart__ JSON format:
+
+        {
+        	"username": "test_user1",
+        	"productId": "123245ds4234",
+        	"productName": "Sony",
+        	"quantity": 1,
+        	"amount": 120000
+        }
+        
+View a user's cart by sending a GET request to __localhost:5000/rest/v1/users/{your_username}/cart__
+
+You will get a response like this:
+       
+        [
+	    {
+                "_id": "607c635b553e2240b0c9ba59",
+        	"username": "test_user1",
+        	"productId": "123245ds4234",
+        	"productName": "Sony",
+        	"quantity": 1,
+        	"amount": 120000,
+	        "__v": 0
+            }
+        ]
+         
+Update a user's cart by sending a PUT request to __localhost:5000/rest/v1/users/{your_username}/cart__
+       
+
 
