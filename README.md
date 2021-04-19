@@ -122,14 +122,14 @@ View a user's cart by sending a GET request to __localhost:5000/rest/v1/users/{y
 You will get a response like this:
        
         [
-	    {
-                "_id": "607c635b553e2240b0c9ba59",
-        	"username": "test_user1",
-        	"productId": "123245ds4234",
-        	"productName": "Sony",
-        	"quantity": 1,
-        	"amount": 120000,
-	        "__v": 0
+	    	{
+                	"_id": "607c635b553e2240b0c9ba59",
+        		"username": "test_user1",
+        		"productId": "123245ds4234",
+        		"productName": "Sony",
+        		"quantity": 1,
+        		"amount": 120000,
+	        	"__v": 0
             }
         ]
          
