@@ -1,4 +1,4 @@
-# ESA Assignment-2 UserCartMicroservice
+# CS474 Enterprise Software Architecture - Assignment 2 UserCartMicroservice
 ## Starting the service
 MongoDB Atlas connection has been used for database.
 
