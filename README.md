@@ -13,7 +13,7 @@ Clone the repository and follow the commands:
         >npm start
 
 Sever will start on port 5000
-## Usage
+## Usage - Make REST API calls
 Create a new user by sending a POST request to __localhost:5000/rest/v1/users__ JSON format:
 
         {
